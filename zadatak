@@ -3,6 +3,7 @@
 using namespace std;
 
 void generator_imena(string ime, string prezime, string prezime2, string grad_rodjenja);
+void funkcija_opsega(int pocetak, int kraj);
 
 int main()
 {
@@ -12,6 +13,15 @@ int main()
   cout<<"Unesi djevojacko prezime potom grad svog rodjenja: \n";
   cin>>prezime2>>grad_rodjenja;
   generator_imena(ime, prezime, prezime2, grad_rodjenja);
+}
+
+void funkcija_opsega(int pocetak,int kraj)
+{
+    for(int i=pocetak;i<=kraj;i++)
+    {
+    double rez = (i * i + 2 * i - 5);
+    cout<<"Za x = "<<i<<" rezultat jednacine je: "<<rez<<endl;
+    }
 }
 
 void generator_imena(string ime, string prezime, string prezime2, string grad_rodjenja)
@@ -28,4 +38,5 @@ void generator_imena(string ime, string prezime, string prezime2, string grad_ro
     star_wars_prezime=mod_prezime2 + mod_grad;
 
     cout<<"Vase StarWars ime glasi: "<<star_wars_ime<<" "<<star_wars_prezime<<endl;
+    funkcija_opsega(0,5);
 }
