@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void generator_imena(string ime, string prezime, string prezime2, string grad_rodjenja);
+
+int main()
+{
+  string ime,prezime,prezime2,grad_rodjenja;
+  cout<<"Unesi svoje ime a zatim prezime: \n";
+  cin>>ime>>prezime;
+  cout<<"Unesi djevojacko prezime potom grad svog rodjenja: \n";
+  cin>>prezime2>>grad_rodjenja;
+  generator_imena(ime, prezime, prezime2, grad_rodjenja);
+}
+
+void generator_imena(string ime, string prezime, string prezime2, string grad_rodjenja)
+{
+
+    string mod_ime,mod_prezime,star_wars_ime;
+    mod_ime=ime.substr(0,3);
+    mod_prezime=prezime.substr(0,2);
+    star_wars_ime=mod_ime + mod_prezime;
+
+    string mod_prezime2, mod_grad, star_wars_prezime;
+    mod_prezime2=prezime2.substr(0,2);
+    mod_grad=grad_rodjenja.substr(0,3);
+    star_wars_prezime=mod_prezime2 + mod_grad;
+
+    cout<<"Vase StarWars ime glasi: "<<star_wars_ime<<" "<<star_wars_prezime<<endl;
+}
